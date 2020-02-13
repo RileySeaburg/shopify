@@ -8,7 +8,7 @@
 {% if template contains 'product' %}
   <meta property="og:type" content="product">
   <meta property="og:title" content="{{ product.title | strip_html | escape }}">
-  <meta property+"og:product_group_id" content="{{ variant.id }}">
+  <meta property="product:retailer_item_id" content="{{product.id}}"
   {% for image in product.images limit:3 %}
     <meta property="og:image" content="https:{{ image.src | product_img_url: '600x' }}">
     <meta property="og:image:secure_url" content="https:{{ image.src | product_img_url: '600x' }}">
